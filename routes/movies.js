@@ -3,8 +3,12 @@ import * as moviesCtrl from '../controllers/movies.js'
 
 const router = Router()
 
-/* GET users listing. */
+
+router.get('/new', moviesCtrl.new)
+
 router.get('/', moviesCtrl.index)
+
+router.post('/', moviesCtrl.create)
 
 export {
   router
