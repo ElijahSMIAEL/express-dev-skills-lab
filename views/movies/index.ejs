@@ -11,7 +11,14 @@
   <ul>
     <% movies.forEach(movie => { %>
       <li>
-        <%= movie.name %>
+        <form 
+          action="/movies/<%= movie._id %>?_method=DELETE" 
+          class="delete-form" 
+          method="POST">
+        
+          <button type="submit">X</button>
+        </form>
+        <a href="movies/<%= movie._id %>"><%= movie.name %></a>
         -
         <%= movie.year %> 
       </li>
